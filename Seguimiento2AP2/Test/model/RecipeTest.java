@@ -11,7 +11,8 @@ class RecipeTest {
 	private Recipe recipe;
 	//Stages
 	public void setupStage1() {
-		recipe= null;
+		
+		recipe = new Recipe();
 	}
 	public void setupStage2() {
 		
@@ -25,10 +26,12 @@ class RecipeTest {
 	
 	//Proof Cases
 	@Test
-	void Test() {
-		
-		
+	void addIngredientTest() {
+		setupStage1();
+		recipe.addIngredient("Sal", 12);
 	
+		//Asserts 
+		assertEquals("Sal", recipe.getIngredients());
 		
 	}
 

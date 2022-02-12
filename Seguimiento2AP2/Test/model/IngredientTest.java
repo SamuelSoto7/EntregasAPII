@@ -41,8 +41,40 @@ class IngredientTest {
 		} catch (NegativeNumberException e) {
 			e.printStackTrace();
 		}
-		//Asserts
+		
+		//Asserts 
+		assertEquals(245, ingredient.getWeight());
 		
 	}
-
+	
+	@Test
+	void removeWeightTest() {
+		setupStage1();
+		try {
+			ingredient.removeWeight(45);
+		} catch (NegativeNumberException e) {
+			e.printStackTrace();
+		}	
+		
+		//Asserts 
+		assertEquals(200, ingredient.getWeight());
+		
+	}
+	
+	@Test
+	void removeWithNegativeWeightTest() {
+		setupStage1();
+		try {
+			ingredient.removeWeight(-100);
+		} catch (NegativeNumberException e) {
+			e.printStackTrace();
+		}	
+		
+		//Asserts 
+		assertEquals(245, ingredient.getWeight());
+		
+	}
+	
 }
+	
+		

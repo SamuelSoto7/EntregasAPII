@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import exception.NegativeNumberException;
+
 public class Recipe {
 	private List<Ingredient> ingredients;
 	
@@ -10,7 +12,7 @@ public class Recipe {
 		ingredients = new ArrayList<Ingredient>();
 	}
 	
-	public void addIngredient(String n, double w) {
+	public void addIngredient(String n, double w) throws NegativeNumberException {
 		
 		Ingredient searched = null;
 		for (int i = 0; i < ingredients.size() && searched==null; i++) {
