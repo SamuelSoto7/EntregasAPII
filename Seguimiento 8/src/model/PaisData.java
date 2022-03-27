@@ -24,7 +24,7 @@ public class PaisData {
 	
 	
 	public void printMale() {
-		System.out.println("\nMasculino");
+		System.out.println("\n*Masculino*\n");
 		for (Pais p:countries) {
 			System.out.println(p.getName() +" "+ p.getMaleGoldMedals() +" "+ p.getMaleSilverMedals() +" "+ p.getMaleBronzeMedals());
 		}
@@ -32,7 +32,7 @@ public class PaisData {
 	
 	public void printFemale() {
 		System.out.println("\n----------\n");
-		System.out.println("Femenino");
+		System.out.println("*Femenino*\n");
 		for (Pais p:countries) {
 			System.out.println(p.getName() +" "+ p.getFemaleGoldMedals() +" "+ p.getFemaleSilverMedals() +" "+ p.getFemaleBronzeMedals());
 		}
@@ -118,7 +118,7 @@ public class PaisData {
 	
 	public void printInsertion() {
 		System.out.println("\n----------\n");
-		System.out.println("Combinado");
+		System.out.println("*Combinado*\n");
 		for(Pais p: countries2) {
 			System.out.println(p.getName() +" "+ p.getTotalGoldMedals() +" "+ p.getTotalSilverMedals() +" "+ p.getTotalBronzeMedals());
 		}
