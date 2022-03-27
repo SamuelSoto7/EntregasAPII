@@ -38,6 +38,8 @@ public class Main {
 		data.printMale();
 		data.sortByComparable();
 		data.printFemale();
+		data.sortByInsertion();
+		data.printInsertion();
 
 	}
 

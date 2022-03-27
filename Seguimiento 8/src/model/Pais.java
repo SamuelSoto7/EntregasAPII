@@ -10,6 +10,9 @@ public class Pais implements Comparable <Pais>{
 	private int femaleGoldMedals;
 	private int femaleSilverMedals;
 	private int femaleBronzeMedals;
+	private int totalGoldMedals;
+	private int totalSilverMedals;
+	private int totalBronzeMedals;
 	
 	public Pais(String name, int maleGoldMedals, int maleSilverMedals, int maleBronzeMedals, int femaleGoldMedals, int femaleSilverMedals, int femaleBronzeMedals) {
 		
@@ -22,6 +25,16 @@ public class Pais implements Comparable <Pais>{
 		this.femaleBronzeMedals = femaleBronzeMedals;
 		
 	}
+	
+	public Pais(String name, int totalGoldMedals, int totalSilverMedals, int totalBronzeMedals) {
+		
+		this.name = name;
+		this.totalGoldMedals = totalGoldMedals;
+		this.totalSilverMedals = totalSilverMedals;
+		this.totalBronzeMedals = totalBronzeMedals;
+		
+	}
+	
 	
 	public String getName() {
 		return name;
@@ -77,6 +90,30 @@ public class Pais implements Comparable <Pais>{
 
 	public void setFemaleBronzeMedals(int femaleBronzeMedals) {
 		this.femaleBronzeMedals = femaleBronzeMedals;
+	}
+	
+	public int getTotalGoldMedals() {
+		return totalGoldMedals;
+	}
+
+	public void setTotalGoldMedals(int totalGoldMedals) {
+		this.totalGoldMedals = totalGoldMedals;
+	}
+
+	public int getTotalSilverMedals() {
+		return totalSilverMedals;
+	}
+
+	public void setTotalSilverMedals(int totalSilverMedals) {
+		this.totalSilverMedals = totalSilverMedals;
+	}
+
+	public int getTotalBronzeMedals() {
+		return totalBronzeMedals;
+	}
+
+	public void setTotalBronzeMedals(int totalBronzeMedals) {
+		this.totalBronzeMedals = totalBronzeMedals;
 	}
 	
 	public String toString() {
