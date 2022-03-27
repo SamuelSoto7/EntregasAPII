@@ -1,6 +1,8 @@
 package main;
 
 import java.util.Scanner;
+
+import model.Pais;
 import model.PaisData;
 
 public class Main {
@@ -27,12 +29,13 @@ public class Main {
 				medallasPais[j] = Integer.parseInt(datosPais[j+1]);	
 			}	
 			
-			data.addPais(name,medallasPais[0],medallasPais[1],medallasPais[2],medallasPais[3],medallasPais[4],medallasPais[5]);
+			Pais newPais = new Pais(name,medallasPais[0],medallasPais[1],medallasPais[2],medallasPais[3],medallasPais[4],medallasPais[5]);
+			data.addPais(newPais);
 		
 		}
 		
-		
-		
+		data.sortByGold();
+		data.printMale();
 
 	}
 

@@ -16,11 +16,8 @@ public class PaisData {
 		return countries;
 	}
 	
-	public void addPais(String name, int maleGoldMedals, int maleSilverMedals, int maleBronzeMedals, int femaleGoldMedals, int femaleSilverMedals, int femaleBronzeMedals) {
-		
-		Pais newPais = new Pais(name, femaleBronzeMedals, femaleBronzeMedals, femaleBronzeMedals, femaleBronzeMedals, femaleBronzeMedals, femaleBronzeMedals);
-		countries.add(newPais);
-		
+	public void addPais(Pais p) {
+		countries.add(p);
 	}
 	
 	
@@ -40,28 +37,29 @@ public class PaisData {
 	}
 	
 	
-	public void sortByGold() {
+	public void sortByComparator() {
 		Collections.sort(countries, new Comparator<Pais>(){
 			@Override
-			public int compare(Pais A,Pais B) {
-				return A.getMaleGoldMedals()-B.getMaleGoldMedals();
-				
-				
+			public int compare(Pais p1,Pais p2) {
+				if(p2.getMaleGoldMedals() == p1.getMaleGoldMedals()) {
+					return p2.getMaleSilverMedals()-p1.getMaleSilverMedals();
+					
+				} else if(p2.getMaleSilverMedals() == p1.getMaleSilverMedals()) {
+					return p2.getMaleBronzeMedals()-p1.getMaleBronzeMedals();
+					
+				} else if(p2.getMaleBronzeMedals() == p1.getMaleBronzeMedals()) {
+					return p2.getName().compareToIgnoreCase(p1.getName());
+					
+				} else {
+					return p2.getMaleGoldMedals()-p1.getMaleGoldMedals();
+				}
 			}
 		});
 		
 		
 	}
 	
-	public void sortByName() {
-		Collections.sort(countries, new Comparator<Pais>(){
-			@Override
-			public int compare(Pais A,Pais B) {
-				return A.getName().compareToIgnoreCase(B.getName());
-				
-			}
-		});
-	}
+	
 	
 	
 	
