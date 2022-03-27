@@ -1,6 +1,6 @@
 package model;
 
-public class Pais {
+public class Pais implements Comparable <Pais>{
 
 	
 	private String name;
@@ -86,5 +86,35 @@ public class Pais {
 	}
 	
 	
+	@Override
+	public int compareTo(Pais p) {
+		
+		Pais A = this;
+		Pais B =p;
+		
+		int output=(A.femaleGoldMedals-B.femaleGoldMedals);
+	
+		if(output==0) {
+			int output2= A.femaleSilverMedals-B.femaleSilverMedals;
+			
+			if(output2==0) {
+				int output3 = A.femaleBronzeMedals-B.femaleBronzeMedals;
+				
+				if(output3==0) {
+					return A.name.compareToIgnoreCase(B.name);
+				
+				} else {
+					return output3;
+				}
+			} else {
+				return output2;
+			}
+			
+		} else {
+			return output;
+		}
+		
+		
+	}
 	
 }

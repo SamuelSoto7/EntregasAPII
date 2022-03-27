@@ -34,8 +34,10 @@ public class Main {
 		
 		}
 		
-		data.sortByGold();
+		data.sortByComparator();
 		data.printMale();
+		data.sortByComparable();
+		data.printFemale();
 
 	}
 

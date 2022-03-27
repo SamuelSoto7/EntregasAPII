@@ -22,7 +22,7 @@ public class PaisData {
 	
 	
 	public void printMale() {
-		System.out.println("Masculino");
+		System.out.println("\nMasculino");
 		for (Pais p:countries) {
 			System.out.println(p.getName() +" "+ p.getMaleGoldMedals() +" "+ p.getMaleSilverMedals() +" "+ p.getMaleBronzeMedals());
 		}
@@ -57,6 +57,10 @@ public class PaisData {
 		});
 		
 		
+	}
+	
+	public void sortByComparable() {
+		Collections.sort(countries);
 	}
 	
 	
